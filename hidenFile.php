@@ -3,14 +3,14 @@
  * hidenFile
  * 
  * @package 
- * @author admin
- * @copyright 2018
+ * @author NathanCHEEF
+ * @copyright 2018/21/09
  * @version 0.1 beta
  * @access public
  */
 class hidenFile
 {
-    var $file = ''; // файл который пр¤чем
+    var $file = ''; // файл который прячем
     var $data = '';
 
     /**
