@@ -1,1 +1,4 @@
-<?php echo 'its first'; ?>
+<?php 
+echo 'its first'; 
+var_dump($_GET);
+?>
