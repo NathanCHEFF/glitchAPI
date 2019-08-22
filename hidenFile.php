@@ -1,4 +1,17 @@
 <?php
+/*
+EN
+This class will help you hide important monitoring and administration files.
+It works like this: create a copy of the class and in it create the session $ x-> makeSession ('cpanel.htm').
+The script will create a directory with a random name and size length and put a copy of your file there. 
+With a new session, the directory with your file is cleared.
+
+RU
+Этот класс поможет вам сокрыть важные файлы контроля и администрирования.
+Работает это так : создаем копию класса и в ней создаем сессию $x->makeSession('cpanel.htm') .
+Скрипт создаст директорию с рандомным названием и длиной размера  и поместит туда копию вашего файла .
+При новой сессии директория с вашим файлом очищаются.
+*/
 /**
  * hidenFile
  * 
