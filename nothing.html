@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  body{
+  	margin:0px;
+  	padding:0px;
+  	background-color: #222222;
+  	color: #d7ecff;
+  font-family: "Helvetica Neue",sans-serif;
+  	
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+	/*font-style: italic;*/
+  }
+  .lableNeon{
+  	text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #228dff;
+  	font-family: "Orbitron", sans-serif;
+  }
+  #headpanel{
+  	padding:10px;
+  }
+  .inline_lable{
+  	display:inline;
+  }
+  </style>
+</head>
+<script>
+setTimeout(function run() {
+  		setHead();
+  		setTimeout(run, 1000);
+	}, 100);
+function threadEvent(){
+	document.getElementById('head').innerHTML = Math.random();
+}
+</script>
+<body>
+<div id='headpanel' style=''>
+	<div id='headpan' style='display: inline;'>
+		<div class='inline_lable lableNeon'>cpu </div>
+		<div class='inline_lable lableNeon' id='head' ></div>
+		<div class='inline_lable lableNeon'>­</div>
+	</div>
+
+</div>
+https://remixicon.com/
+</body>
+</html>
