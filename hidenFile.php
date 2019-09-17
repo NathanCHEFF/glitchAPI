@@ -68,6 +68,7 @@ class hidenFile
      */
     private function _sv__data( $data )
     {
+// return (file_exists($this->data)) false : file_get_contents($this->data, $data);
         if ( file_exists( $this->data ) )
         {
             return false;
