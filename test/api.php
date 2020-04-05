@@ -1,18 +1,16 @@
 <?php
 #comment with debuging
-error_reporting(0);			//for clothe
-display_errors(false); 		//
+//error_reporting(E_ALL);			//for clothe
+//display_errors(1); 		//
 #
 class api
 {
-	//const API_ENDPOINT 	 = '';			//ENDPOINT   kill him
+
 	const API_VER_PRFX   = 'v';
 	const API_MTD_PRFX   = 'method';
 	const API_VER_LIST   = 'versionlist.json';
 
-
 	private static $instance;
-
 
 	public static function getApi(){
 		//GET or POST
@@ -45,14 +43,17 @@ class api
 	}
 
 	function load(){
-		//echo $this->getEndPoint(). $this->getVerList()->$_GET[SELF::API_VER_PRFX].$_GET[SELF::API_MTD_PRFX].'.php';
-
-		if( file_exists( $this->getVerList()->$_GET[SELF::API_VER_PRFX]. $_GET[SELF::API_MTD_PRFX].'.php')){
-			include_once( $this->getVerList()->$_GET[SELF::API_VER_PRFX].$_GET[SELF::API_MTD_PRFX].'.php');   // ЦЫМЕС
+		//echo $this->getEndPoint(). $this->getVerList()->$_GET[SELF::API_VER_PRFX].$_GET[SELF::API_MTD_PRFX].'.php';\
+		$API_VER_PRFX = $_GET[SELF::API_VER_PRFX];
+		//var_dump( $this->getVerList()->$API_VER_PRFX . $_GET[SELF::API_MTD_PRFX].'.php');
+		//echo "\n";
+		if( file_exists( $this->getVerList()->$API_VER_PRFX . $_GET[SELF::API_MTD_PRFX].'.php')){
+			include_once( $this->getVerList()->$API_VER_PRFX .$_GET[SELF::API_MTD_PRFX].'.php');   // ЦЫМЕС
 		}else{
 			return $this->ifError('error code -1 : [method name] method_file_not_exists');
 		}
 	}
+
 
 	private function getEndPoint(){
 		//вернет  путь относительно директории этого файла
