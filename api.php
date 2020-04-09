@@ -1,7 +1,8 @@
 <?php
 #comment with debuging
 //error_reporting(E_ALL);			//for clothe
-//display_errors(1); 		//
+//display_errors(1);
+
 #
 class api
 {
